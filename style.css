@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+body {
+  background-color: #fff0c7;
+  font-family: 'Kanit', sans-serif;
+}
+
+.ducks {
+  font-size: 60px;
+  text-align: center;
+}
+.tribute {
+  text-align: center;
+}
+
+.nav{
+  font-size: 50px;
+  text-align: right;
+  margin-right: 50px;
+}
+
+.nav button{
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 204), 0 6px 20px 0 rgba(254, 241, 96);
+  cursor:pointer;
+  border: 0px;
+  padding-right:5px;
+  padding-left: 5px;
+  margin-right:15px;
+  margin-left: 15px;
+  border-radius:20px;
+  width:150px;
+  height:50px;
+  color: white;
+  background-color:#ffe485;
+}
+
+.duckgif {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
