@@ -5,16 +5,138 @@
     <meta name="viewport" content="width=device-width">
     <title>ducko!</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <div class = "maincontainer">
       <div class = "nav">
+        <a href="about.html"><button>About</button></a>
         <a href="playground.html"><button>Playground!</button></a>
+        <a href="codedayhighlight.html"><button>CodeDay Highlights</button></a>
       </div>
+      
       <h1 class = "ducks sketch-highlight">Ducko.</h1>
       <p class = "tribute">A tribute to ducks</p>
       <img class = "duckgif" src = "https://media4.giphy.com/media/rtRflhLVzbNWU/200.gif" alt = "duck gif">
-      <script src="script.js"></script>
+      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class = "ducksounds">
+        <h2 class = "soundstext">duck sounds! bless your ears!</h2>
+        <figure>
+          <figcaption>Listen to the boring duck:</figcaption>
+          <audio controls src="/sounds/Duck-quack.mp3"> Your browser does not support the <code> audio </code> element. </audio>
+        </figure>
+        <figure>
+          <figcaption>Listen to the human duck:</figcaption>
+          <audio controls src="/sounds/avaduck.m4a"> Your browser does not support the <code> audio </code> element. </audio>
+        </figure>
+      </div>
+      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class = "drawduck">
+        <h2 class="drawtext">draw a duck!</h2>
+        <div id="sketch">
+          <canvas id="paint"></canvas>
+        </div>
+        <div id="settings"> Colors
+          <button class = "colorbtn green" onclick="getColor('green');">Green</button>
+          <button class = "colorbtn orange" onclick="getColor('orange');">Orange</button>
+          <button class = "colorbtn yellow" onclick="getColor('yellow');">Yellow</button>
+          <button class = "colorbtn white" onclick="getColor('white');">White</button>
+          <button class = "colorbtn eraser" onclick="getColor('#333333');">Eraser</button>
+        </div>
+
+        <div id="settings"> Brush Size
+          <button class = "sizebtn" onclick="getSize('2');">smol</button>
+          <button class = "sizebtn" onclick="getSize('5');">medium</button>
+          <button class = "sizebtn" onclick="getSize('10');">large</button>
+          <button class = "sizebtn" onclick="getSize('20');">xlxlxl</button>
+        </div>
+      </div>
+      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class = "photos">
+        <h2 class = "phototext">look at these majestic ducks!!</h2>
+        <div class = "container">
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/how-to-keep-ducks-call-ducks-1615457181.jpg?resize=640:*">
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://media.king5.com/assets/KING/images/40592af6-a314-463f-b1dd-391362a31636/40592af6-a314-463f-b1dd-391362a31636_1920x1080.jpg" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://i.ytimg.com/vi/U-C0I-Ks14M/maxresdefault.jpg" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhzeJwyXioUypttF4516xZzX_5nrKMOcNduA&usqp=CAU" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://organicfeeds.com/wp-content/uploads/2019/02/duck-product-bg.jpg" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://www.gannett-cdn.com/presto/2020/11/06/PSIF/5323fae3-b3ee-43f6-a25a-2023d3842e21-hot_duck.jpg" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://www.thesprucepets.com/thmb/TZ__BkPT8-TASbf4HD0impfZ_CQ=/2121x1193/smart/filters:no_upscale()/GettyImages-481523341-acc726247c9e4f5abef6f4bd13559691.jpg" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://organicfeeds.com/wp-content/uploads/2021/03/How-To-Raise-A-Baby-Duck-scaled-1.jpg.webp" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://nas-national-prod.s3.amazonaws.com/styles/api_hero_bird_with_crop_1920_1200/public/birds/hero_image/web_a1_3029_1_wood-duck_harry_collins_kk.jpg?tok=1626941160" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://www.treehugger.com/thmb/ekORZ6wgGvhLfwfacUr9VErOEic=/3630x2420/filters:no_upscale():max_bytes(150000):strip_icc()/close-up-of-mandarin-duck-swimming-in-water--racconigi--cuneo--italy-977593824-7b8a89e6589c4a25bee2273cffba1965.jpg" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://img.theepochtimes.com/assets/uploads/2020/07/31/Special-Ducks-i.jpg" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://i.imgur.com/cHhVbam.png" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://farmhouseguide.com/wp-content/uploads/2020/10/Beautiful-Ducks-Breeds.jpg.webp" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREcCNHvG9wifX82ITrN7cCwt2_6I9Wl_GiPw&usqp=CAU" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://www.treehugger.com/thmb/WnKQ3D9vm-1WzIeLV1hFzHBA5Ic=/2121x1414/filters:no_upscale():max_bytes(150000):strip_icc()/male--smew--mergellus-albellus--1204186112-065d93ce30754f80bd0bcb43753700b6.jpg" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Pair_of_mandarin_ducks.jpg/1200px-Pair_of_mandarin_ducks.jpg" >
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class = "photos">
+        <h2 class = "phototext">look at these ugly non-ducks!!</h2>
+        <div class = "container">
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://th-thumbnailer.cdn-si-edu.com/rDqS7CQVfpWAjgPXuiKR34oc4Rg=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/a5/a5/a5a5cfff-a4e7-454f-bae2-cfc6c1fed66a/19991130_jab_cs9_163.jpg">
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://cdn.cnn.com/cnnnext/dam/assets/130911185736-ugly-animals-aye-aye.jpg" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2013/9/12/1378996016011/A-male-Proboscis-monkey-N-002.jpg?width=700&quality=85&auto=format&fit=max&s=07b227b4bffb780434b7c93ff4814a98" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://ichef.bbci.co.uk/images/ic/1040x1040/p03tqg6g.jpg" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://i.natgeofe.com/n/6025aee3-ae11-4041-8d31-4d0e754c19ab/01-waq-strange-cute-animals_16x9.jpg?w=1200" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://allthatsinteresting.com/wordpress/wp-content/uploads/2013/11/ugliest-animals.jpg" >
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <img class = "duckphoto" src = "https://infinitespider.com/wp-content/uploads/2014/09/California_Condor.jpg" >
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class = "photos">
+        <h2 class = "superior">DUCKS ARE SUPERIOR. ∎</h2>
+      </div>
+      <p class = "footer">made by ashley & christy @ codeday bay area fall 2021 ♡</p>
     </div>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

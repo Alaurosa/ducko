@@ -3,12 +3,14 @@
 body {
   background-color: #fff0c7;
   font-family: 'Kanit', sans-serif;
+  cursor: url("https://cdn.discordapp.com/attachments/657116199548878848/909221547716255794/duckresized.png"), auto;
 }
 
 .ducks {
   font-size: 60px;
   text-align: center;
 }
+
 .tribute {
   text-align: center;
 }
@@ -20,6 +22,7 @@ body {
 }
 
 .nav button{
+  font-weight: 600;
   box-shadow: 0 8px 16px 0 rgba(255, 255, 204), 0 6px 20px 0 rgba(254, 241, 96);
   cursor:pointer;
   border: 0px;
@@ -31,11 +34,237 @@ body {
   width:150px;
   height:50px;
   color: white;
-  background-color:#ffe485;
+  background-color:#f2cd91;
 }
+.nav button:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
 
 .duckgif {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  margin-bottom: 20px;
+}
+
+.ducksounds {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 40px;
+  background-color: #f2cd91;
+}
+.soundstext {
+  font-weight: 200;
+  text-align: center;
+}
+figure {
+  text-align: center;
+}
+
+#settings { 
+  display: block;
+  text-align: center;
+}
+#paint {
+  border: 1px solid black;
+  background : #333333;
+  margin-left: auto;
+  margin-right: auto; display: block;
+}
+
+.drawduck {
+  margin-top: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 40px;
+  background-color: #f2cd91;
+}
+.drawtext {
+  font-weight: 200;
+  text-align: center;
+}
+
+/*playground*/
+#secondpage{
+  background-image: url('duckoplayground.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.playground{
+  padding-left: 50px;
+}
+
+/* .playgroundtoHome{
+  float:right; 
+}
+
+.twitchWatch{
+  /* position: relative;
+  top: 420px; 
+  float: right;
+  
+} */
+
+.rightsidebuttons{
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  columns:30px;
+  float: right;
+  padding-top: 30%;
+}
+
+#playgroundtoHome{
+  order: 0;
+  margin-top: -130%;
+}
+
+#twitchWatch{
+  order: 1;
+  margin-bottom: -20%;
+}
+
+#text{
+  margin-left: 80px;
+}
+
+#secondpage button{
+  font-weight: 300;
+  cursor:pointer;
+  border: 0px;
+  padding-top:10px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right:15px;
+  margin-left: 15px;
+  border-radius:20px;
+  width:fit-content;
+  height:fit-content;
+  color: white;
+  background-color:#f2cd91;
+}
+
+/*color*/
+.sizebtn {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: 0px;
+  color: white;
+  border-radius: 5px;
+  background-color: grey;
+}
+.sizebtn:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.colorbtn {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: 0px;
+  color: white;
+  border-radius: 5px;
+}
+.colorbtn:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.orange {
+  background-color: #e3b35b;
+}
+.green {
+  background-color: #93db86;
+}
+.white {
+  background-color: white;
+  color: black;
+}
+.yellow {
+  background-color: #e0d85c;
+}
+.eraser {
+  color: black;
+}
+
+.photos {
+  margin-top: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 40px;
+  background-color: #f2cd91;
+  text-align: center;
+}
+.phototext {
+  font-weight: 200;
+  text-align: center;
+}
+
+.about{
+  text-align:center;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  border-radius: 0px 0px 35px 35px;
+}
+.duckphoto {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  margin: 10px;
+}
+.superior {
+  font-weight: 200;
+}
+.duckies {
+  width: 20%;
+}
+.footer {
+  text-align: center;
+}
+
+/*codeday highlights*/
+.highlightsh {
+  text-align: center;
+}
+.highlightsheader .dpf {
+  font-weight: 200;
+}
+.hlphoto {
+  height: 200px;
+  width: 270px;
+  object-fit: cover;
+  margin: 10px;
 }
