@@ -117,16 +117,13 @@ figure {
   padding-left: 50px;
 }
 
-/* .playgroundtoHome{
-  float:right; 
+.leftsidebuttons{
+  float:left;
+  display: flex;
+  flex-direction: column;
+  columns:30px;
+  margin-left: 50px 
 }
-
-.twitchWatch{
-  /* position: relative;
-  top: 420px; 
-  float: right;
-  
-} */
 
 .rightsidebuttons{
   justify-content: space-between;
@@ -137,18 +134,31 @@ figure {
   padding-top: 30%;
 }
 
+#aboutus{
+  margin-top: 200%;
+}
+
+#codedayhighlight{
+  margin-left:15% !important;
+  margin-top: 15%;
+}
+
+#buysomeduckies{
+  margin-left: 20% !important;
+  margin-top:20%;
+}
+
 #playgroundtoHome{
-  order: 0;
-  margin-top: -130%;
+  margin-top: -100%;
+}
+
+#duckss{
+  margin-top:-175%;
+  margin-left: -100% !important;
 }
 
 #twitchWatch{
-  order: 1;
-  margin-bottom: -20%;
-}
-
-#text{
-  margin-left: 80px;
+  margin-bottom: -40%;
 }
 
 #secondpage button{
